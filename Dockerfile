@@ -1,5 +1,5 @@
 # Container image that runs your code
-FROM vishnunair/docker-redis-cluster:latest
+FROM docker:stable
 MAINTAINER Vishnu Nair <me@vishnudxb.me>
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
