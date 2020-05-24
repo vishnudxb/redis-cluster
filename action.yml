@@ -7,27 +7,27 @@ branding:
 inputs:
   master1-port:
     description: 'Port number for master1'
-    required: true
+    required: false
     default: 5000
   master2-port:
     description: 'Port number for master2'
-    required: true
+    required: false
     default: 5001
   master3-port:
     description: 'Port number for master3'
-    required: true
+    required: false
     default: 5002
   slave1-port:
     description: 'Port number for slave1'
-    required: true
+    required: false
     default: 5003
   slave2-port:
     description: 'Port number for slave2'
-    required: true
+    required: false
     default: 5004
   slave3-port:
     description: 'Port number for slave3'
-    required: true
+    required: false
     default: 5005
 runs:
   using: 'docker'
