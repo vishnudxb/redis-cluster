@@ -2,7 +2,7 @@
 
 This [GitHub Action](https://github.com/features/actions) sets up Redis cluster with 3 master and 3 slave in a single container for your testing purpose.
 
-The image used is from https://github.com/vishnudxb/docker-redis-cluster
+The image used is from https://hub.docker.com/r/vishnunair/docker-redis-cluster
 
 # Usage
 
@@ -11,7 +11,7 @@ See [action.yml](action.yml)
 Basic:
 ```yaml
 steps:
-- uses: vishnudxb/redis-cluster@1.0.5
+- uses: vishnudxb/redis-cluster@1.0.6
   with:
     master1-port: 5000
     master2-port: 5001
@@ -36,7 +36,7 @@ jobs:
         submodules: true
 
     - name: Test redis cluster
-      uses: vishnudxb/redis-cluster@1.0.5
+      uses: vishnudxb/redis-cluster@1.0.6
       with:
         master1-port: 5000
         master2-port: 5001
