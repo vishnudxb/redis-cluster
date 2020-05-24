@@ -11,7 +11,7 @@ See [action.yml](action.yml)
 Basic:
 ```yaml
 steps:
-- uses: vishnudxb/redis-cluster@1.0.4
+- uses: vishnudxb/redis-cluster@1.0.5
   with:
     master1-port: 5000
     master2-port: 5001

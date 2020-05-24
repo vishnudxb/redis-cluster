@@ -32,3 +32,10 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.master1-port }}
+    - ${{ inputs.master2-port }}
+    - ${{ inputs.master3-port }}
+    - ${{ inputs.slave1-port }}
+    - ${{ inputs.slave2-port }}
+    - ${{ inputs.slave3-port }}
