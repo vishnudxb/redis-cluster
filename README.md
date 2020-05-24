@@ -11,14 +11,14 @@ See [action.yml](action.yml)
 Basic:
 ```yaml
 steps:
-- uses: vishnudxb/redis-cluster@1.0.2
+- uses: vishnudxb/redis-cluster@1.0.3
   with:
     master1-port: '5000'
     master2-port: '5001'
     master3-port: '5002'
     slave1-port: '5003'
-    slave2-port: '5003'
-    slave3-port: '5004'
+    slave2-port: '5004'
+    slave3-port: '5005'
 ```
 
 # License
