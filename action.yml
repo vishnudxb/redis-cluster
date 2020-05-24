@@ -1,16 +1,28 @@
-# action.yml
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Redis Cluster with Master-Slave'
+description: 'Setup Redis cluster with 3 master and 3 slave in a single container'
+author: 'Vishnu Nair'
+branding:
+  icon: 'database'
+  color: 'red'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  master1-port:
+    description: 'Port number for master1'
     required: true
-    default: 'World'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  master2-port:
+    description: 'Port number for master2'
+    required: true
+  master3-port:
+    description: 'Port number for master3'
+    required: true
+  slave1-port:
+    description: 'Port number for slave1'
+    required: true
+  slave2-port:
+    description: 'Port number for slave2'
+    required: true
+  slave3-port:
+    description: 'Port number for slave3'
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.who-to-greet }}
