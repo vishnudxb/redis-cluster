@@ -24,8 +24,3 @@ done
 # For example, you can check if all nodes are available and part of the cluster
 
 echo "Redis Cluster is up and running!"
-
-# You can add more health check logic here if necessary
-
-# Keep the script running to keep the Docker container running
-tail -f /dev/null
