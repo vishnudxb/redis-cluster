@@ -17,7 +17,7 @@ sh -c "$docker_run"
 # Wait for Redis Cluster to be up and running
 echo "Waiting for Redis Cluster to start..."
 until docker exec redis-cluster redis-cli -h localhost -p 6379 cluster info; do
-    sleep 1
+    sleep 5
 done
 
 # Perform additional health check here if needed
