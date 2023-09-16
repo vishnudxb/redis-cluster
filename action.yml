@@ -36,6 +36,8 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  env:
+    SLEEP_DURATION: ${{ inputs.sleep-duration }}
   args:
     - ${{ inputs.master1-port }}
     - ${{ inputs.master2-port }}
@@ -44,4 +46,3 @@ runs:
     - ${{ inputs.slave2-port }}
     - ${{ inputs.slave3-port }}
     - ${{ inputs.slave3-port }}
-    - ${{ inputs.sleep-duration }}
