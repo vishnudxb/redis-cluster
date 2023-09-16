@@ -19,7 +19,7 @@ steps:
     slave1-port: 5003
     slave2-port: 5004
     slave3-port: 5005
-    sleep-duration: 5 # Define the sleep duration for docker to run (Here we set default to 5seconds)
+    sleep-duration: 5 # Define the sleep duration for docker to start and ready for accepting connections (Here we set default to 5seconds)
 ```
 
 Sample usage in github action job:
