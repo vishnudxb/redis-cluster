@@ -8,7 +8,7 @@ MASTER3_PORT=$3
 SLAVE1_PORT=$4
 SLAVE2_PORT=$5
 SLAVE3_PORT=$6
-SLEEP_DURATION=${7:-5} # Use 5 as the default if not provided
+SLEEP_DURATION=${SLEEP_DURATION:-5} # Use 5 as the default if not provided
 
 # Ensure that SLEEP_DURATION is treated as an integer
 SLEEP_DURATION=$((SLEEP_DURATION))
@@ -20,6 +20,7 @@ sh -c "$docker_run"
 # Wait for Redis Cluster to be up and running
 echo "Waiting for Redis Cluster to start..."
 until docker exec redis-cluster redis-cli -h localhost -p 6379 cluster info; do
+    echo "Sleep duration of: $SLEEP_DURATION"
     sleep "$SLEEP_DURATION"
 done
 
