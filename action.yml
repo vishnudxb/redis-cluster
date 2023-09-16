@@ -32,7 +32,7 @@ inputs:
   sleep-duration:
     description: 'Sleep duration in seconds'
     required: false
-    default: 5
+    default: '5'
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -44,4 +44,4 @@ runs:
     - ${{ inputs.slave2-port }}
     - ${{ inputs.slave3-port }}
     - ${{ inputs.slave3-port }}
-    - ${{ inputs.sleep-duration }}
+    - "${{ inputs.sleep-duration }}"

@@ -10,6 +10,9 @@ SLAVE2_PORT=$5
 SLAVE3_PORT=$6
 SLEEP_DURATION=${7:-5} # Use 5 as the default if not provided
 
+# Ensure that SLEEP_DURATION is treated as an integer
+SLEEP_DURATION=$((SLEEP_DURATION))
+
 docker_run="docker run -d -p ${MASTER1_PORT}:6379 -p ${MASTER2_PORT}:6380 -p ${MASTER3_PORT}:6381 -p ${SLAVE1_PORT}:6382 -p ${SLAVE2_PORT}:6383 -p ${SLAVE3_PORT}:6384 --name redis-cluster vishnunair/docker-redis-cluster:latest"
 
 sh -c "$docker_run"
