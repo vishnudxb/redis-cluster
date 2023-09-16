@@ -11,7 +11,7 @@ See [action.yml](action.yml)
 Basic:
 ```yaml
 steps:
-- uses: vishnudxb/redis-cluster@1.0.8
+- uses: vishnudxb/redis-cluster@1.0.9
   with:
     master1-port: 5000
     master2-port: 5001
@@ -19,6 +19,7 @@ steps:
     slave1-port: 5003
     slave2-port: 5004
     slave3-port: 5005
+    sleep-duration: 5 # Define the sleep duration for docker to run (Here we set default to 5seconds)
 ```
 
 Sample usage in github action job:
@@ -36,7 +37,7 @@ jobs:
         submodules: true
 
     - name: Test redis cluster
-      uses: vishnudxb/redis-cluster@1.0.8
+      uses: vishnudxb/redis-cluster@1.0.9
       with:
         master1-port: 5000
         master2-port: 5001
@@ -44,6 +45,7 @@ jobs:
         slave1-port: 5003
         slave2-port: 5004
         slave3-port: 5005
+        sleep-duration: 5
 
      # Running Test
     - name: Running Test
